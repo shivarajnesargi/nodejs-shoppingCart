@@ -1,0 +1,121 @@
+     
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+             <div id="payment-errors" class="alert alert-danger {{#if noError}}hidden{{/if}}" >
+                       {{errMsg}}
+            </div> 
+            </div>                          
+        </div>       
+
+
+    	<!-- CREDIT CARD FORM STARTS HERE -->
+            <div class="panel panel-default credit-card-box customwidth center-block">
+                <div class="panel-heading display-table" >
+                    <div class="row display-tr" >
+                    
+                    </div>        
+                    <div class="row display-tr" >
+                        <h3 class="panel-title display-td" >Payment Details</h3>
+                        <div class="display-td" >                            
+                            <img class="img-responsive pull-right" src="https://i.imgur.com/gIMFDbp.png">
+                            <!-- <img class="img-responsive pull-right" src="https://i.imgur.com/WluzPvZ.png">
+                            <img class="img-responsive pull-right" src="https://i.imgur.com/H5lJRwk.png">
+                            <img class="img-responsive pull-right" src="https://i.imgur.com/1U8OBnM.png">
+                            <img class="img-responsive pull-right" src="https://i.imgur.com/iqIDYfz.png">
+                        	-->
+                        </div>
+                    </div>                    
+                </div>
+                <div class="panel-body">
+                    <form role="form" id="payment-form" action="/checkout" method="POST">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input 
+                                            type="tel"
+                                            class="form-control"
+                                            name="cardNumber"
+                                            placeholder="Valid Card Number"
+                                            autocomplete="cc-number"
+                                            id="cardNumber"
+                                            required autofocus 
+                                        />
+                                        <span class="input-group-addon"><i class="fa fa-credit-card" id="cardlogo" style="color:purple;font-size:2rem;"></i></span>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="cardName">Card Holder Name</label>
+                                    <input type="text" class="form-control" name="cardName" id="cardName" />
+                                </div>
+                            </div>                        
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control" 
+                                        name="cardExpiry"
+                                        placeholder="MM / YY"
+                                        id="cardExpiry"
+                                        autocomplete="cc-exp"
+                                        required 
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cardCVC">CV CODE</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control"
+                                        name="cardCVC"
+                                        placeholder="CVC"
+                                        id="cardCVC"
+                                        autocomplete="cc-csc"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="address">ADDRESS</label>
+                                    <input type="text" class="form-control" name="address" />
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="couponCode">COUPON CODE</label>
+                                    <input type="text" class="form-control" name="couponCode" />
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-success btn-lg btn-block" type="submit">Submit</button>
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="col-xs-12">
+                                <p class="payment-errors"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+            <script type="text/javascript" src="javascripts/checkOut.js"></script>            
+            <!-- CREDIT CARD FORM ENDS HERE -->
+  
