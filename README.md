@@ -1,5 +1,5 @@
 # Shopping Cart 
-This is a shopping cart application usign NodeJs,ExpressJs and MongoDB. It uses handle bars as templating engine. 
+This is a shopping cart application using NodeJs,ExpressJs and MongoDB. It uses handle bars as templating engine. 
 PassportJs is used for authentication and StripeJs is used for handling payments.
 
 
